@@ -1,0 +1,3 @@
+const axios=require("axios"),fs=require('fs');
+
+module.exports={config:{name:"memevoice",aliases:["mv"],version:"1.0",author:"Kshitiz",countDown:10,role:0,shortDescription:"Sends a random meme voice",longDescription:"Sends a random meme voice",category:"fun",guide:"{pn} memevoice"},onStart:async function({api:e,event:t,message:n}){e.setMessageReaction("🕐",t.messageID,()=>{},!0);try{const{data:s}=await axios.get("https://mvoice-rmis.onrender.com/kshitiz",{responseType:"arraybuffer"}),o=`${__dirname}/cache/${Date.now()}.mp3`;fs.writeFileSync(o,Buffer.from(s)),n.reply({body:"🔊 Here's your meme voice:",attachment:fs.createReadStream(o)}),console.log("Audio sent successfully.")}catch(e){console.error("Error occurred:",e),n.reply(`An error occurred: ${e.message}`)}}};

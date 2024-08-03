@@ -1,61 +1,71 @@
 const axios = require("axios");
-const monitoredURLs = new Set();
+const fs = require("fs-extra");
+const path = require("path");
 
 module.exports = {
-    config: {
-        name: "monitor",
-        aliases: [],
-        author: "Hazeyy/kira", // hindi ito collab, ako kasi nag convert :>
-        version: "69",
-        cooldowns: 5,
-        role: 0,
-        shortDescription: {
-            en: "monitor repl's"
-        },
-        longDescription: {
-            en: "monitor repl's"
-        },
-        category: "utility",
-        guide: {
-            en: "{p}{n} [url]"
+  config: {
+    name: "monitor",
+    aliases: [],
+    version: "1.0",
+    author: "Vex_kshitiz",
+    role: 0,
+    shortDescription: { en: "Displays the bot's uptime and ping." },
+    longDescription: { en: "Find out how long the bot has been tirelessly serving you and its current ping." },
+    category: "owner",
+    guide: { en: "Use {p}monitor to reveal the bot's uptime and ping." }
+  },
+  onStart: async function ({ api, event, args }) {
+    try {
+      const t = Date.now(); 
+
+      const s = ["zoro", "madara", "obito", "luffy"];
+
+      const r = Math.floor(Math.random() * s.length);
+      const q = s[r];
+
+      const u = `https://pin-two.vercel.app/pin?search=${encodeURIComponent(q)}`;
+
+      const a = await axios.get(u);
+      const l = a.data.result;
+
+      const i = Math.floor(Math.random() * l.length);
+      const p = l[i];
+
+      const b = await axios.get(p, { responseType: 'arraybuffer' });
+      const f = path.join(__dirname, 'cache', `monitor_image.jpg`);
+      await fs.outputFile(f, b.data);
+
+      const e = process.uptime();
+      const k = Math.floor(e % 60);
+      const h = Math.floor((e / 60) % 60);
+      const g = Math.floor((e / (60 * 60)) % 24);
+      const d = Math.floor(e / (60 * 60 * 24));
+
+      let c = `${d} days, ${g} hours, ${h} minutes, and ${k} seconds`;
+      if (d === 0) {
+        c = `${g} hours, ${h} minutes, and ${k} seconds`;
+        if (g === 0) {
+          c = `${h} minutes, and ${k} seconds`;
+          if (h === 0) {
+            c = `${k} seconds`;
+          }
         }
-    },
+      }
 
-    onStart: async function ({ api, event }) {
-        const args = event.body.split(/\s+/);
-        args.shift();
+      const m = Date.now() - t;
 
-        if (args.length < 1) {
-            api.sendMessage("🗨️ 𝖴𝗌𝖺𝗀𝖾: 𝗆𝗈𝗇𝗂𝗍𝗈𝗋 [ 𝗎𝗋𝗅 ] 𝗍𝗈 𝗌𝗍𝖺𝗋𝗍 𝗆𝗈𝗇𝗂𝗍𝗈𝗋𝗂𝗇𝗀", event.threadID);
-            return;
-        }
+      const message = `Greetings! Your bot\nhas been running for:\n${c}\n\nCurrent Ping: ${m}`;
+      const imageStream = fs.createReadStream(f);
 
-        const url = args[0];
+      await api.sendMessage({
+        body: message,
+        attachment: imageStream
+      }, event.threadID, event.messageID);
 
-        if (monitoredURLs.has(url)) {
-            api.sendMessage(`⚠️ ${url} 𝗂𝗌 𝖺𝗅𝗋𝖾𝖺𝖽𝗒 𝖻𝖾𝗂𝗇𝗀 𝗆𝗈𝗇𝗂𝗍𝗈𝗋𝖾𝖽`, event.threadID);
-            return;
-        }
-
-        try {
-            monitoredURLs.add(url);
-            api.sendMessage(`🕟 𝖠𝖽𝖽𝗂𝗇𝗀 𝖴𝖱𝖫 𝗍𝗈 𝗍𝗁𝖾 𝗆𝗈𝗇𝗂𝗍𝗈𝗋𝗂𝗇𝗀 𝗅𝗂𝗌𝗍...`, event.threadID);
-
-            setTimeout(async () => {
-                const response = await axios.post("https://hazeyy-up-api.kyrinwu.repl.co/api/uptime", { uptime: url });
-
-                if (response.data && response.data.success === false) {
-                    api.sendMessage(response.data.msg, event.threadID, event.messageId);
-                    return;
-                }
-
-                api.sendMessage(`🟢 𝖴𝖱𝖫 ${url} 𝗌𝗍𝖺𝗋𝗍𝖾𝖽 𝗌𝗎𝖼𝖼𝖾𝗌𝗌𝖿𝗎𝗅𝗅𝗒`, event.threadID);
-            }, 8000);
-        } catch (error) {
-            api.sendMessage("🔴 𝖠𝗇 𝖾𝗋𝗋𝗈𝗋 𝗈𝖼𝖼𝗎𝗋𝖾𝖽 𝗐𝗁𝗂𝗅𝖾 𝗌𝗍𝖺𝗋𝗍𝗂𝗇𝗀 𝗍𝖺𝗋𝗍𝗂𝗇𝗀 𝗍𝗁𝖾 𝖴𝗋𝗈𝗂 𝗆𝗈𝗇𝗂𝗍𝗈𝗋𝗂𝗇𝗀.", event.threadID);
-            console.error(error);
-        } finally {
-            monitoredURLs.delete(url);
-        }
+      await fs.unlink(f);
+    } catch (error) {
+      console.error(error);
+      return api.sendMessage(`An error occurred.`, event.threadID, event.messageID);
     }
+  }
 };

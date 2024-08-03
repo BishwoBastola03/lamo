@@ -1,4 +1,4 @@
--cmd install pg.js const crypto = require('crypto');
+ const crypto = require('crypto');
 const EventSource = require('eventsource');
 const axios = require('axios');
 
