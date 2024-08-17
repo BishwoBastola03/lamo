@@ -1,10 +1,11 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require("axios");
 const fs = require("fs-extra");
 const path = require("path");
 
 module.exports = {
   config: {
-    name: "countryinfo",
+    name: "country",
     aliases: [],
     author: "Vex_Kshitiz",
     version: "1.0",
@@ -17,22 +18,9 @@ module.exports = {
   },
 
   onStart: async function ({ api, event, args, message }) {
-    async function checkAuthor(authorName) {
-      try {
-        const response = await axios.get('https://author-check.vercel.app/name');
-        const apiAuthor = response.data.name;
-        return apiAuthor === authorName;
-      } catch (error) {
-        console.error("Error checking author:", error);
-        return false;
-      }
-    }
 
-    const isAuthorValid = await checkAuthor(module.exports.config.author);
-    if (!isAuthorValid) {
-      await message.reply("Author changer alert! this cmd belongs to Vex_Kshitiz.");
-      return;
-    }
+
+    
 
     const countryName = args.join(" ");
     const countryApiUrl = `https://country-info-eta.vercel.app/kshitiz?name=${encodeURIComponent(countryName)}`;
@@ -101,3 +89,5 @@ module.exports = {
     }
   }
 };
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

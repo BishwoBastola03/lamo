@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require("axios");
 const { shortenURL } = global.utils; 
 
@@ -45,3 +46,5 @@ module.exports = {
     }
   },
 };
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

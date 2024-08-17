@@ -1,3 +1,4 @@
+
 const axios = require("axios");
 const fs = require('fs-extra');
 const path = require('path');
@@ -9,16 +10,7 @@ const fileExtensions = {
 
 };
 
-async function checkAuthor(authorName) {
-  try {
-    const response = await axios.get('https://author-check.vercel.app/name');
-    const apiAuthor = response.data.name;
-    return apiAuthor === authorName;
-  } catch (error) {
-    console.error("Error checking author:", error);
-    return false;
-  }
-}
+
 
 async function helis(api, event, args, message) {
   try {
@@ -93,11 +85,6 @@ module.exports = {
 
   handleCommand: helis,
   onStart: async function ({ api, event, message, args }) {
-    const isAuthorValid = await checkAuthor(module.exports.config.author);
-    if (!isAuthorValid) {
-      await message.reply("Author changer alert! This command belongs to Vex_Kshitiz.");
-      return;
-    }
 
     return helis(api, event, args, message);
   },

@@ -9,7 +9,7 @@
   },
   {
     "name": "del",
-    "usage": 20
+    "usage": 39
   },
   {
     "name": "replicate",
@@ -25,7 +25,7 @@
   },
   {
     "name": "cs",
-    "usage": 19
+    "usage": 39
   },
   {
     "name": "animesong",
@@ -33,15 +33,15 @@
   },
   {
     "name": "ag",
-    "usage": 1
-  },
-  {
-    "name": "gcstats",
     "usage": 2
   },
   {
+    "name": "gcstats",
+    "usage": 4
+  },
+  {
     "name": "",
-    "usage": 6
+    "usage": 81
   },
   {
     "name": "ytstalk",
@@ -69,7 +69,7 @@
   },
   {
     "name": "ffedit",
-    "usage": 2
+    "usage": 3
   },
   {
     "name": "roast",
@@ -89,7 +89,7 @@
   },
   {
     "name": "ffshorts",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "xl",
@@ -97,15 +97,15 @@
   },
   {
     "name": "genx",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "imagine",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "namepicker",
-    "usage": 1
+    "usage": 3
   },
   {
     "name": "liner",
@@ -113,7 +113,7 @@
   },
   {
     "name": "ascart",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "bg",
@@ -129,7 +129,7 @@
   },
   {
     "name": "wp",
-    "usage": 2
+    "usage": 3
   },
   {
     "name": "i2v2",
@@ -145,7 +145,7 @@
   },
   {
     "name": "randompic",
-    "usage": 1
+    "usage": 3
   },
   {
     "name": "otakunews",
@@ -157,19 +157,19 @@
   },
   {
     "name": "fyp",
-    "usage": 2
+    "usage": 4
   },
   {
     "name": "helis",
-    "usage": 2
+    "usage": 5
   },
   {
     "name": "xfollow",
-    "usage": 2
+    "usage": 3
   },
   {
     "name": "unsend",
-    "usage": 4
+    "usage": 36
   },
   {
     "name": "livescore",
@@ -177,11 +177,11 @@
   },
   {
     "name": "hotscope",
-    "usage": 2
+    "usage": 3
   },
   {
     "name": "onlytik",
-    "usage": 1
+    "usage": 3
   },
   {
     "name": "unsemd",
@@ -201,7 +201,7 @@
   },
   {
     "name": "ij",
-    "usage": 2
+    "usage": 6
   },
   {
     "name": "pdf",
@@ -217,7 +217,7 @@
   },
   {
     "name": "phub",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "say",
@@ -233,15 +233,15 @@
   },
   {
     "name": "nhentai",
-    "usage": 2
+    "usage": 5
   },
   {
     "name": "hentai",
-    "usage": 1
+    "usage": 8
   },
   {
     "name": "hentaiwatch",
-    "usage": 1
+    "usage": 3
   },
   {
     "name": "tiktrend",
@@ -257,10 +257,522 @@
   },
   {
     "name": "file",
-    "usage": 1
+    "usage": 2
   },
   {
     "name": "pg",
+    "usage": 4
+  },
+  {
+    "name": "up",
+    "usage": 3
+  },
+  {
+    "name": "𝖢𝗆𝖽",
+    "usage": 1
+  },
+  {
+    "name": "uid",
+    "usage": 9
+  },
+  {
+    "name": "adc",
+    "usage": 2
+  },
+  {
+    "name": "help",
+    "usage": 8
+  },
+  {
+    "name": "adduser",
+    "usage": 14
+  },
+  {
+    "name": "g",
+    "usage": 8
+  },
+  {
+    "name": "anigif",
+    "usage": 1
+  },
+  {
+    "name": "admin",
+    "usage": 9
+  },
+  {
+    "name": "sing",
+    "usage": 5
+  },
+  {
+    "name": "loadconfig",
+    "usage": 4
+  },
+  {
+    "name": "pending",
+    "usage": 5
+  },
+  {
+    "name": "beast",
+    "usage": 1
+  },
+  {
+    "name": "block",
+    "usage": 4
+  },
+  {
+    "name": "bored",
+    "usage": 1
+  },
+  {
+    "name": "cdp",
+    "usage": 2
+  },
+  {
+    "name": "coupledp",
+    "usage": 3
+  },
+  {
+    "name": "chords",
+    "usage": 1
+  },
+  {
+    "name": "clear",
+    "usage": 7
+  },
+  {
+    "name": "clean",
+    "usage": 2
+  },
+  {
+    "name": "callad",
+    "usage": 2
+  },
+  {
+    "name": "app",
+    "usage": 2
+  },
+  {
+    "name": "define",
+    "usage": 1
+  },
+  {
+    "name": "imgur",
+    "usage": 2
+  },
+  {
+    "name": "corn",
+    "usage": 1
+  },
+  {
+    "name": "count",
+    "usage": 1
+  },
+  {
+    "name": "countryinfo",
+    "usage": 2
+  },
+  {
+    "name": "country",
+    "usage": 4
+  },
+  {
+    "name": "comd",
+    "usage": 1
+  },
+  {
+    "name": "mocky",
+    "usage": 4
+  },
+  {
+    "name": "emojimean",
+    "usage": 1
+  },
+  {
+    "name": "emoji",
+    "usage": 1
+  },
+  {
+    "name": "daily",
+    "usage": 2
+  },
+  {
+    "name": "dice",
+    "usage": 1
+  },
+  {
+    "name": "dicedash",
+    "usage": 2
+  },
+  {
+    "name": "cnd",
+    "usage": 1
+  },
+  {
+    "name": "antiout",
+    "usage": 6
+  },
+  {
+    "name": "fbacc",
+    "usage": 1
+  },
+  {
+    "name": "l",
+    "usage": 19
+  },
+  {
+    "name": "fun2",
+    "usage": 1
+  },
+  {
+    "name": "gc",
+    "usage": 1
+  },
+  {
+    "name": "gen",
+    "usage": 1
+  },
+  {
+    "name": "getcode",
+    "usage": 2
+  },
+  {
+    "name": "getlink",
+    "usage": 2
+  },
+  {
+    "name": "girl",
+    "usage": 1
+  },
+  {
+    "name": "github",
+    "usage": 1
+  },
+  {
+    "name": "search",
+    "usage": 1
+  },
+  {
+    "name": "staliases",
+    "usage": 1
+  },
+  {
+    "name": "setaliases",
+    "usage": 2
+  },
+  {
+    "name": "group",
+    "usage": 3
+  },
+  {
+    "name": "hanime",
+    "usage": 2
+  },
+  {
+    "name": "hello",
+    "usage": 2
+  },
+  {
+    "name": "history",
+    "usage": 1
+  },
+  {
+    "name": "horoscope",
+    "usage": 1
+  },
+  {
+    "name": "hotscooe",
+    "usage": 1
+  },
+  {
+    "name": "google",
+    "usage": 1
+  },
+  {
+    "name": "idst",
+    "usage": 2
+  },
+  {
+    "name": "wl",
+    "usage": 5
+  },
+  {
+    "name": "tell",
+    "usage": 2
+  },
+  {
+    "name": "spam",
+    "usage": 4
+  },
+  {
+    "name": "kda",
+    "usage": 1
+  },
+  {
+    "name": "karma",
+    "usage": 2
+  },
+  {
+    "name": "khaby",
+    "usage": 1
+  },
+  {
+    "name": "owner",
+    "usage": 1
+  },
+  {
+    "name": "off",
+    "usage": 1
+  },
+  {
+    "name": "offbot",
+    "usage": 1
+  },
+  {
+    "name": "tag",
+    "usage": 1
+  },
+  {
+    "name": "upt",
+    "usage": 1
+  },
+  {
+    "name": "uptime",
+    "usage": 2
+  },
+  {
+    "name": "update",
+    "usage": 1
+  },
+  {
+    "name": "love",
+    "usage": 4
+  },
+  {
+    "name": "malnews",
+    "usage": 1
+  },
+  {
+    "name": "mangadex",
+    "usage": 1
+  },
+  {
+    "name": "marry",
+    "usage": 1
+  },
+  {
+    "name": "membercount",
+    "usage": 1
+  },
+  {
+    "name": "memevoice",
+    "usage": 2
+  },
+  {
+    "name": "resend",
+    "usage": 3
+  },
+  {
+    "name": "lyricvideo",
+    "usage": 1
+  },
+  {
+    "name": "+tid",
+    "usage": 1
+  },
+  {
+    "name": "tid",
+    "usage": 1
+  },
+  {
+    "name": "memstole",
+    "usage": 2
+  },
+  {
+    "name": "kick",
+    "usage": 9
+  },
+  {
+    "name": "refresh",
+    "usage": 11
+  },
+  {
+    "name": "join",
+    "usage": 2
+  },
+  {
+    "name": "i",
+    "usage": 6
+  },
+  {
+    "name": "profile",
+    "usage": 1
+  },
+  {
+    "name": "prompt",
+    "usage": 2
+  },
+  {
+    "name": "animagine",
+    "usage": 2
+  },
+  {
+    "name": "pfp",
+    "usage": 1
+  },
+  {
+    "name": "movieinfo",
+    "usage": 1
+  },
+  {
+    "name": "mpn",
+    "usage": 1
+  },
+  {
+    "name": "music",
+    "usage": 4
+  },
+  {
+    "name": "musicinfo",
+    "usage": 1
+  },
+  {
+    "name": "nepmeme",
+    "usage": 1
+  },
+  {
+    "name": "news",
+    "usage": 1
+  },
+  {
+    "name": "niji",
+    "usage": 2
+  },
+  {
+    "name": "nn",
+    "usage": 1
+  },
+  {
+    "name": "npm",
+    "usage": 1
+  },
+  {
+    "name": "onlytil",
+    "usage": 1
+  },
+  {
+    "name": "pantiesclose",
+    "usage": 2
+  },
+  {
+    "name": "pantieclose",
+    "usage": 1
+  },
+  {
+    "name": "playlyrics",
+    "usage": 1
+  },
+  {
+    "name": "pmeme",
+    "usage": 2
+  },
+  {
+    "name": "propose",
+    "usage": 1
+  },
+  {
+    "name": "autolink",
+    "usage": 2
+  },
+  {
+    "name": "setalaises",
+    "usage": 1
+  },
+  {
+    "name": "putin",
+    "usage": 2
+  },
+  {
+    "name": "pvdo",
+    "usage": 1
+  },
+  {
+    "name": "rules",
+    "usage": 3
+  },
+  {
+    "name": "feedback",
+    "usage": 1
+  },
+  {
+    "name": "work",
+    "usage": 4
+  },
+  {
+    "name": "quiz",
+    "usage": 4
+  },
+  {
+    "name": "reels",
+    "usage": 1
+  },
+  {
+    "name": "weather",
+    "usage": 5
+  },
+  {
+    "name": "waifudex",
+    "usage": 2
+  },
+  {
+    "name": "ban",
+    "usage": 1
+  },
+  {
+    "name": "𝘏",
+    "usage": 1
+  },
+  {
+    "name": "morse",
+    "usage": 1
+  },
+  {
+    "name": "💋",
+    "usage": 1
+  },
+  {
+    "name": "tiktok",
+    "usage": 1
+  },
+  {
+    "name": "fbdl",
+    "usage": 1
+  },
+  {
+    "name": "video",
+    "usage": 1
+  },
+  {
+    "name": "load",
+    "usage": 1
+  },
+  {
+    "name": "setwelcome",
+    "usage": 10
+  },
+  {
+    "name": "pendingall",
+    "usage": 1
+  },
+  {
+    "name": "ando",
+    "usage": 1
+  },
+  {
+    "name": "leave",
+    "usage": 2
+  },
+  {
+    "name": "setwelcomefile",
     "usage": 1
   }
 ]

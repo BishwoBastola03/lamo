@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const fs = require("fs");
 const path = require("path");
 
@@ -312,3 +313,5 @@ function formatNumberWithFullForm(number) {
   // Add the full form to the formatted number
   return `${formattedNumber} ${fullForms[fullFormIndex]}`;
 }
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const malScraper = require('mal-scraper');
 
 module.exports = {
@@ -32,4 +33,5 @@ module.exports = {
 				api.sendMessage("Sorry, something went wrong while fetching the news.", event.threadID);
 			});
 	}
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

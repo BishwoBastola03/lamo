@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 module.exports = {
   config: {
     name: "bio",
@@ -22,4 +23,5 @@ module.exports = {
     api.changeBio(args.join(" "));
     message.reply("change bot bio to:" + args.join(" "));
   },
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

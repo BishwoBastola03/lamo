@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 module.exports = {
   config: {
     name: "drip",
@@ -35,4 +36,5 @@ module.exports = {
       api.sendMessage("Please mention or reply to someone", event.threadID, event.messageID);
     }
   }
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

@@ -1,10 +1,11 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
 
 module.exports = {
   config: {
-    name: "anivid",
+    name: "anivideo",
     aliases: [],
     author: "Kshitiz",
     version: "1.0",
@@ -54,3 +55,5 @@ module.exports = {
     }
   }
 };
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

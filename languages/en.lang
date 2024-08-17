@@ -89,20 +89,33 @@ handlerCheckData.cantCreateThread=Groups with id '%1' cannot be written to the d
 handlerCheckData.cantCreateUser=Users with id '%1' cannot be written to the database!
 
 # bot/handler/handlerEvents.js
-handlerEvents.userBanned=You have been banned from using the bot\n» Reason: %1\n» Time: %2\n» User ID: %3
-handlerEvents.threadBanned=This group has been banned from using the bot\n» Reason: %1\n» Time: %2\n» Thread ID: %3
-handlerEvents.onlyAdminBox=This group is currently enabled only group administrators can use the bot
-handlerEvents.onlyAdminBot=❌ | Currently only bot's admin can use bot
-handlerEvents.commandNotFound=Command "%1" does not exist, type %2help to see all available commands
-handlerEvents.commandNotFound2=The command you are using does not exist, type %1help to see all available commands
-handlerEvents.commandSyntaxError=The command you are using is wrong syntax, please type %1help %2 to see the details of how to use this command
-handlerEvents.onlyAdmin=❌ | Only group administrators can use the command "%1"
-handlerEvents.onlyAdminToUseOnReply=❌ | Only group administrators can use the reply function of the command "%1"
-handlerEvents.onlyAdminToUseOnReaction=❌ | Only group administrators can use the reaction function of the command "%1"
-handlerEvents.onlyAdminBot2=❌ | Only bot's admin can use the command "%1"
-handlerEvents.onlyAdminBot2ToUseOnReply=❌ | Only bot's admin can use the reply function of the command "%1"
-handlerEvents.onlyAdminBot2ToUseOnReaction=❌ | Only bot's admin can use the reaction function of the command "%1"
-handlerEvents.waitingForCommand=⏱ You are in the waiting time to use this command, please come back after %1s
+handlerEvents.userBanned= 𝘈𝘯 𝘢𝘥𝘮𝘪𝘯𝘪𝘴𝘵𝘳𝘢𝘵𝘰𝘳 𝘩𝘢𝘴 𝘪𝘴𝘴𝘶𝘦𝘥 𝘢 𝘣𝘢𝘯 𝘢𝘨𝘢𝘪𝘯𝘴𝘵 𝘺𝘰𝘶 𝘥𝘶𝘦 𝘵𝘰 𝘮𝘪𝘴𝘶𝘴𝘦 𝘰𝘧 𝘮𝘺 𝘤𝘰𝘮𝘮𝘢𝘯𝘥𝘴.𝘗𝘭𝘦𝘢𝘴𝘦 𝘤𝘰𝘯𝘵𝘢𝘤𝘵 𝘵𝘩𝘦 𝘢𝘥𝘮𝘪𝘯 𝘵𝘦𝘢𝘮 𝘵𝘰 𝘳𝘦𝘴𝘰𝘭𝘷𝘦 𝘵𝘩𝘦 𝘪𝘴𝘴𝘶𝘦 𝘢𝘯𝘥 𝘳𝘦𝘨𝘢𝘪𝘯 𝘵𝘩𝘦 𝘢𝘤𝘤𝘦𝘴𝘴.\n☞︎︎︎ 𝘙𝘦𝘢𝘴𝘰𝘯: %1\n☞︎︎︎ 𝘛𝘪𝘮𝘦: %2\n☞︎︎︎ 𝘜𝘴𝘦𝘳 𝘐𝘥: %3
+
+handlerEvents.threadBanned=𝘈 𝘣𝘢𝘯 𝘩𝘢𝘴 𝘣𝘦𝘦𝘯 𝘪𝘴𝘴𝘶𝘦𝘥 𝘧𝘰𝘳 𝘵𝘩𝘪𝘴 𝘨𝘳𝘰𝘶𝘱, 𝘢𝘯𝘥 𝘢𝘭𝘭 𝘤𝘩𝘢𝘵 𝘢𝘤𝘵𝘪𝘷𝘪𝘵𝘪𝘦𝘴 𝘢𝘳𝘦 𝘩𝘦𝘳𝘦𝘣𝘺 𝘵𝘦𝘳𝘮𝘪𝘯𝘢𝘵𝘦𝘥 ,𝘢𝘴 𝘱𝘦𝘳 𝘵𝘩𝘦 𝘢𝘥𝘮𝘪𝘯 𝘥𝘦𝘤𝘪𝘴𝘪𝘰𝘯 \n☞︎︎︎𝘙𝘦𝘢𝘴𝘰𝘯: %1\n☞︎︎︎ 𝘛𝘪𝘮𝘦: %2\n☞︎︎︎ 𝘛𝘩𝘳𝘦𝘢𝘥 𝘐𝘋: %3
+
+handlerEvents.onlyAdminBox=𝘖𝘯𝘭𝘺 𝘎𝘳𝘰𝘶𝘱 𝘢𝘥𝘮𝘪𝘯𝘴 𝘩𝘢𝘷𝘦 𝘢𝘤𝘤𝘦𝘴𝘴 𝘵𝘰 𝘵𝘩𝘦 𝘤𝘰𝘮𝘮𝘢𝘯𝘥𝘴
+handlerEvents.onlyAdminBot=𝘖𝘯𝘭𝘺 𝘵𝘩𝘦 𝘉𝘰𝘵 𝘢𝘥𝘮𝘪𝘯 𝘩𝘢𝘷𝘦 𝘢𝘤𝘦𝘴𝘴 𝘵𝘰 𝘵𝘩𝘦 𝘤𝘰𝘮𝘮𝘢𝘯𝘥𝘴
+
+handlerEvents.commandNotFound="%1" 𝘪𝘴 𝘯𝘰𝘵 𝘳𝘦𝘤𝘰𝘨𝘯𝘪𝘻𝘦𝘥. 𝘜𝘴𝘦 %2help 𝘵𝘰 𝘦𝘹𝘱𝘭𝘰𝘳𝘦 𝘢𝘭𝘭 𝘵𝘩𝘦 𝘢𝘷𝘢𝘭𝘪𝘢𝘣𝘭𝘦 𝘤𝘰𝘮𝘮𝘢𝘯𝘥𝘴.
+
+handlerEvents.commandNotFound2=𝘛𝘩𝘦 𝘤𝘰𝘮𝘮𝘢𝘯𝘥 𝘺𝘰𝘶 𝘦𝘯𝘵𝘦𝘳𝘦𝘥 𝘪𝘴 𝘪𝘯𝘷𝘢𝘭𝘪𝘥. 𝘗𝘭𝘦𝘢𝘴𝘦 𝘵𝘺𝘱𝘦 %1𝘩𝘦𝘭𝘱 𝘵𝘰 𝘷𝘪𝘦𝘸 𝘢 𝘭𝘪𝘴𝘵 𝘰𝘧 𝘢𝘷𝘢𝘭𝘪𝘢𝘣𝘭𝘦 𝘤𝘰𝘮𝘮𝘢𝘯𝘥𝘴   
+
+handlerEvents.commandSyntaxError=𝘛𝘩𝘦 𝘤𝘰𝘮𝘮𝘢𝘯𝘥 𝘺𝘰𝘶 𝘢𝘳𝘦 𝘶𝘴𝘪𝘯𝘨 𝘩𝘢𝘴 𝘪𝘯𝘤𝘰𝘳𝘳𝘦𝘤𝘵 𝘴𝘴𝘺𝘯𝘵𝘢𝘹. 𝘗𝘭𝘦𝘢𝘴𝘦 𝘵𝘺𝘱𝘦 %1help %2 𝘵𝘰 𝘷𝘪𝘦𝘸 𝘵𝘩𝘦 𝘤𝘰𝘮𝘮𝘢𝘯𝘥𝘴 𝘶𝘴𝘢𝘨𝘦 𝘥𝘦𝘵𝘢𝘪𝘭𝘴 𝘢𝘮𝘥 𝘭𝘦𝘢𝘳𝘯 𝘩𝘰𝘸 𝘵𝘰 𝘶𝘴𝘦 𝘪𝘵 𝘤𝘰𝘳𝘳𝘦𝘤𝘵𝘭𝘺  
+
+handlerEvents.onlyAdmin=𝘖𝘯𝘭𝘺 𝘎𝘳𝘰𝘶𝘱 𝘢𝘥𝘮𝘪𝘯𝘪𝘴𝘵𝘳𝘢𝘵𝘰𝘳𝘴 𝘢𝘳𝘦 𝘢𝘶𝘵𝘩𝘰𝘳𝘪𝘻𝘦𝘥 𝘵𝘰 𝘦𝘹𝘦𝘤𝘶𝘵𝘦 𝘵𝘩𝘦 "%1" 𝘤𝘰𝘮𝘮𝘢𝘯𝘥
+
+handlerEvents.onlyAdminToUseOnReply=𝘖𝘯𝘭𝘺 𝘎𝘳𝘰𝘶𝘱 𝘢𝘥𝘮𝘪𝘯𝘪𝘴𝘵𝘳𝘢𝘵𝘰𝘳𝘴 𝘢𝘳𝘦 𝘢𝘶𝘵𝘩𝘰𝘳𝘪𝘻𝘦𝘥 𝘵𝘰 𝘶𝘴𝘦 𝘵𝘩𝘦 𝘳𝘦𝘱𝘭𝘺 𝘧𝘶𝘯𝘤𝘵𝘪𝘰𝘯 𝘰𝘧 𝘵𝘩𝘦 "%1" 𝘤𝘰𝘮𝘮𝘢𝘯𝘥
+
+handlerEvents.onlyAdminToUseOnReaction= 𝘖𝘯𝘭𝘺 𝘎𝘳𝘰𝘶𝘱 𝘢𝘥𝘮𝘪𝘯𝘪𝘴𝘵𝘳𝘢𝘵𝘰𝘳𝘴 𝘢𝘳𝘦 𝘢𝘶𝘵𝘩𝘰𝘳𝘪𝘻𝘦𝘥 𝘵𝘰 𝘶𝘴𝘦 𝘵𝘩𝘦 𝘳𝘦𝘢𝘤𝘵𝘪𝘰𝘯 𝘧𝘶𝘯𝘤𝘵𝘪𝘰𝘯 𝘰𝘧 𝘵𝘩𝘦 𝘤𝘰𝘮𝘮𝘢𝘯𝘥 "%1"
+
+handlerEvents.onlyAdminBot2= 𝘖𝘯𝘭𝘺 𝘵𝘩𝘦 𝘣𝘰𝘵  𝘢𝘥𝘮𝘪𝘯 𝘪𝘴 𝘢𝘶𝘵𝘩𝘰𝘳𝘪𝘻𝘦𝘥 𝘵𝘰 𝘶𝘴𝘦 𝘵𝘩𝘦 𝘤𝘰𝘮𝘮𝘢𝘯𝘥 "%1"
+
+handlerEvents.onlyAdminBot2ToUseOnReply= 𝘖𝘯𝘭𝘺 𝘵𝘩𝘦 𝘣𝘰𝘵 𝘢𝘥𝘮𝘪𝘯 𝘪𝘴 𝘢𝘶𝘵𝘩𝘰𝘳𝘪𝘻𝘦𝘥 𝘵𝘰 𝘶𝘴𝘦 𝘵𝘩𝘦 𝘳𝘦𝘱𝘭𝘺 𝘧𝘶𝘯𝘤𝘵𝘪𝘰𝘯 𝘰𝘥 𝘵𝘩𝘦 "%1" command.
+
+handlerEvents.onlyAdminBot2ToUseOnReaction= Only bot's admin can use the reaction function of the command "%1"
+
+handlerEvents.waitingForCommand=𝘠𝘰𝘶 𝘢𝘳𝘦 𝘰𝘯 𝘩𝘰𝘭𝘥 𝘧𝘰𝘳 %1s. 𝘗𝘭𝘦𝘢𝘴𝘦 𝘵𝘳𝘺 𝘢𝘨𝘢𝘪𝘯 𝘭𝘢𝘵𝘦𝘳. 
+
 handlerEvents.errorOccurred=❌ [ %1 ]\nAn error occurred at command "%2"\n\n%3
 handlerEvents.errorOccurred2=❌ [ %1 ]\nAn error occurred at command onChat in command "%2"\n\n%3
 handlerEvents.errorOccurred3=❌ [ %1 ]\nAn error occurred when executing onReply at command "%2"\n\n%3

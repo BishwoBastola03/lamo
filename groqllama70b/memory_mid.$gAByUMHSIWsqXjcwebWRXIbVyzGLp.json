@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "ramake the grammer ans make it to a better version Command \"name of command \" does not exist, type +help to see all available commands"
+  },
+  {
+    "role": "assistant",
+    "content": "Here is a revised version of the sentence:\n\n\"Only the bot's administrator can currently use the bot.\"\n\nLet me know if you need further assistance!"
+  }
+]

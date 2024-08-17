@@ -1,4 +1,4 @@
-
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require('axios');
 
 module.exports = {
@@ -65,4 +65,5 @@ module.exports = {
       api.sendMessage('Sorry, something went wrong while trying to send a meme image. Please try again later.', event.threadID);
     }
   }
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 module.exports = {
 	config: {
 		name: "bigtxt",
@@ -219,4 +220,5 @@ module.exports = {
 	}
 	return api.sendMessage(msg+"\nSee the message on the browser to see more clearly", event.threadID, event.messageID);
 }
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 module.exports = {
   config: {
     name: "age",
@@ -29,3 +30,5 @@ module.exports = {
     api.sendMessage(`Your Age Is ${finalAge} Am I Right?`, event.threadID);
   },
 };
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

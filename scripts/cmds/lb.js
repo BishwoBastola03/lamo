@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const fs = require('fs');
 const path = require('path');
 const { createCanvas, loadImage } = require('canvas');
@@ -164,3 +165,5 @@ function getLangurBurjaSymbol(cardNumber) {
   const symbols = ['♥', '♦', '♣', '♠', '⚑', '♚'];
   return symbols[cardNumber - 1];
 }
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

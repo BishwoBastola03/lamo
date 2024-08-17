@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 //add ko dapat dito yung parang mag silbing json 👇👇
 
 const accounts = [];
@@ -52,4 +53,5 @@ module.exports = {
 },
 };
 
-
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

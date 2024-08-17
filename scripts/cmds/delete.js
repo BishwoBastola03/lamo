@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 module.exports = {
   config: {
     name: "delete",
@@ -29,4 +30,5 @@ role: 2,
       api.sendMessage(`✅ ( ${fileName} ) Deleted successfully!`, event.threadID);
     });
   }
-};
+}; const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

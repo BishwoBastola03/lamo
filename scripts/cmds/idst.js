@@ -1,4 +1,4 @@
-module.exports = {
+const { GoatWrapper } = require('fca-liane-utils');module.exports = {
 config: {
   name: "idst",
   aurthor:"?/zed",// Convert By Goatbot Zed
@@ -24,3 +24,5 @@ config: {
   else return api.sendMessage("Only reply sticker", event.threadID);
 },
   };
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

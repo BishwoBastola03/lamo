@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 module.exports = {
   config: {
     name: "ping",
@@ -22,4 +23,5 @@ module.exports = {
     const ping = Date.now() - timeStart;
     api.sendMessage(`The current ping is ${ping}ms.`, event.threadID);
   }
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

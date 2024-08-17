@@ -1,6 +1,7 @@
+const { GoatWrapper } = require('fca-liane-utils');
 module.exports = {
   config: {
-    name: "getlink",
+    name: "link",
     version: "1.0",
     author: "AceGun",
     countDown: 5,
@@ -24,4 +25,5 @@ module.exports = {
 
     return api.sendMessage(messageReply.attachments[0].url, event.threadID, event.messageID);
   }
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

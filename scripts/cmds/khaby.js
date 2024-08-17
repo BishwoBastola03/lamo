@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require('axios');
   const request = require('request');
   const fs = require("fs");
@@ -38,4 +39,5 @@ module.exports = {
    var callback = () => api.sendMessage({body:``,attachment: fs.createReadStream(__dirname + "/assets/any.png")}, event.threadID, () => fs.unlinkSync(__dirname + "/assets/any.png"),event.messageID);
    return request(encodeURI(`https://api.memegen.link/images/khaby-lame/${text1}/${text2}.png`)).pipe(fs.createWriteStream(__dirname+'/assets/any.png')).on('close',() => callback());  
 } 
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

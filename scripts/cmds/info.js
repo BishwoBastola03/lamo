@@ -15,7 +15,7 @@ module.exports = {
 		envConfig: {}
 	},
 	onStart: async function ({ message }) {
-		const botName = "Suzumi Ryuu";
+		const botName = "An ya";
 		const authorName = "Mr perfect";
 		const pre = "+" ;
 		const urls = JSON.parse(fs.readFileSync('perfect-god.json'));

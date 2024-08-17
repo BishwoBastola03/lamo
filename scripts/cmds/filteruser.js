@@ -2,7 +2,7 @@ const { GoatWrapper } = require('fca-liane-utils');
 
 module.exports = {
 		config: {
-				name: "filter",
+				name: "filteruser",
 				version: "2.0.0",
 				role: 2,
 				credits: "Marjhun Baylon",

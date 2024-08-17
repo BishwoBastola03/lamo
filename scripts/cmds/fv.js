@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const { createCanvas, loadImage } = require('canvas');
 const fs = require('fs');
 const path = require('path');
@@ -145,3 +146,5 @@ function splitText(ctx, text, maxWidth) {
 
     return lines;
 }
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require('axios');
 const jimp = require("jimp");
 const fs = require("fs")
@@ -47,4 +48,5 @@ async function bal(one, two) {//credit akash #_#
 
     await img.writeAsync(pth)
     return pth
-}
+}const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

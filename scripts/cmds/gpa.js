@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require("axios");//based on Nepal education
 
 module.exports = {
@@ -57,4 +58,5 @@ module.exports = {
       event.messageID
     );
   },
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

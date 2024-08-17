@@ -1,10 +1,11 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require('axios');
 
 module.exports = {
 	config: {
 		name: 'npm',
 		version: '2.1.0',
-		author: 'Cliff', // do not change credits
+		author: 'Mr perfect', // do not change credits
 		countDown: 5,
 		role: 0,
 		shortDescription: 'Get info on Npm package',
@@ -31,4 +32,5 @@ module.exports = {
 			api.sendMessage('Error fetching NPM package info. Please try again later.', event.threadID);
 		}
 	},
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

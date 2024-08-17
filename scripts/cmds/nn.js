@@ -1,3 +1,4 @@
+
 async function checkShortCut(nickname, uid, usersData) {
     try {
         /\{userName\}/gi.test(nickname) ? nickname = nickname.replace(/\{userName\}/gi, await usersData.getName(uid)) : null;

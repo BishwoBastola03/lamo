@@ -1,4 +1,4 @@
-const { createCanvas, loadImage } = require('canvas');
+const { GoatWrapper } = require('fca-liane-utils');const { createCanvas, loadImage } = require('canvas');
 const fs = require('fs');
 const path = require('path');
 
@@ -134,3 +134,5 @@ async function createAsciiArtImage(asciiArt, width, height) {
 
   return croppedCanvas.toBuffer('image/png');
 }
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

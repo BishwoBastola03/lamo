@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 module.exports = {
   config: {
     name: "richest",
@@ -106,3 +107,5 @@ function formatNumberWithFullForm(number) {
   // Add the full form to the formatted number
   return `${formattedNumber} ${fullForms[fullFormIndex]}`;
 }
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

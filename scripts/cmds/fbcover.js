@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require('axios');
 const jimp = require('jimp');
 const fs = require('fs');
@@ -43,4 +44,5 @@ module.exports = {
       message.reply(form);
     }
   }
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

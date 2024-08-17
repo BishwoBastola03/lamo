@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 module.exports = {
 	config: {
 		name: "listbox",
@@ -38,4 +39,5 @@ module.exports = {
 			console.error("Error listing group chats", error);
 		}
 	},
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

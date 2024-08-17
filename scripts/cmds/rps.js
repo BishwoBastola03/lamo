@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 module.exports = {
  config: {
  name: "rps",
@@ -62,4 +63,5 @@ module.exports = {
  message.reply("╔════ஜ۩۞۩ஜ═══╗\n\nI win! Better luck next time! 😎\n\n╚════ஜ۩۞۩ஜ═══╝");
  }
  },
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require("axios");
 
 module.exports = {
@@ -24,4 +25,5 @@ module.exports = {
 			api.sendMessage("Failed to retrieve IP address.", event.threadID, event.messageID);
 		}
 	},
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

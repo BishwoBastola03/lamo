@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const moment = require("moment");
 const fetch = require("node-fetch");
 const axios = require("axios");
@@ -48,4 +49,5 @@ module.exports = {
         api.sendMessage("An error occurred while fetching the user's information. Please try again later.", event.threadID, event.messageID);
       });
   },
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

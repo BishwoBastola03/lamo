@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const { createCanvas, loadImage, registerFont } = require('canvas');
 const fs = require('fs');
 const path = require('path');
@@ -537,3 +538,5 @@ function blendImages(ctx, grayscaleImageData, blurredImageData) {
 
     return blendedImageData;
 }
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

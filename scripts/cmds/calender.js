@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const fetch = require('node-fetch');
 const { createCanvas } = require('canvas');
 const fs = require('fs');
@@ -194,3 +195,5 @@ function nepaliToRoman(nepaliName) {
 
   return nepaliMonthMap[nepaliName] || nepaliName;
 }
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

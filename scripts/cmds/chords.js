@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const tabs = require("ultimate-guitar");
 
 module.exports = {
@@ -49,3 +50,5 @@ module.exports = {
     }
   }
 };
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

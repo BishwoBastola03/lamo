@@ -2,7 +2,7 @@ const axios = require("axios");
 const fs = require('fs-extra');
 const path = require('path');
 const { shortenURL } = global.utils;
-
+const { GoatWrapper } = require('fca-liane-utils');
 async function animeSong(api, event, args, message) {
     api.setMessageReaction("🕢", event.messageID, (err) => {}, true);
     try {
@@ -61,3 +61,5 @@ module.exports = {
         return animeSong(api, event, args, message);
     }
 };
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

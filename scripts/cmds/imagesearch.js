@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require('axios');
 const google = require("googlethis");
 const cloudscraper = require("cloudscraper");
@@ -6,7 +7,7 @@ const fs = require("fs");
 module.exports = {
  config: {
  name: "imgsearch",
- aliases: ["is"],
+ aliases: ["imagesarch","photosearch"],
  version: "1.0",
  author: "Jun",
  countDown: 5,
@@ -80,4 +81,5 @@ module.exports = {
 
  api.sendMessage(msg, event.threadID, event.messageID);
  }
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

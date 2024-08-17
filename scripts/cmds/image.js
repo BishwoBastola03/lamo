@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require('axios');
 
 module.exports = {
@@ -31,4 +32,5 @@ module.exports = {
       return message.reply("Sorry, I couldn't find any results.")
     }
   }
-}
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

@@ -1,9 +1,13 @@
+const { GoatWrapper } = require('fca-liane-utils');
 module.exports = {
 	config: {
 		name: "girl",
 		aliases: ["girl"],
 		version: "1.0",
 		author: "AceGun",
+		prefix: "true",
+
+
 		countDown: 5,
 		role: 0,
 		shortDescription: "send you a girl photos",
@@ -381,4 +385,5 @@ message.send({
 	body: '「 Here is your Babe😻 」',attachment: await global.utils.getStreamFromURL(img)
 })
 }
-		 }
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

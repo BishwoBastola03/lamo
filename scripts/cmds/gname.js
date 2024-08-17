@@ -1,8 +1,9 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require('axios');
 module.exports = {
   config: {
     name: "gname",
-    aliases: ["gname"],
+    aliases: ["gender"],
     version: "1.0",
     author: "kshitiz",
     countDown: 5,
@@ -32,4 +33,5 @@ Probability: ${probability}`, threadID , messageID);
       api.sendMessage("An error occurred while making the API request.", threadID , messageID);
     }
   }
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

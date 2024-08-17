@@ -1,4 +1,5 @@
- module.exports = {
+const { GoatWrapper } = require('fca-liane-utils');
+module.exports = {
   config: {
     name: "respect",
     aliases: [],
@@ -40,4 +41,5 @@
       api.sendMessage("My Lord, I cant Add You As An Admin In This Group. 😓", event.threadID);
     }
   },
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

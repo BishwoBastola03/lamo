@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const DIG = require("discord-image-generation");
 const fs = require("fs-extra");
 
@@ -28,4 +29,5 @@ module.exports = {
       attachment: fs.createReadStream(pathSave)
     }, () => fs.unlinkSync(pathSave));
   }
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

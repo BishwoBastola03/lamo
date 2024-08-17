@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require('axios');
 
 module.exports = {
@@ -48,4 +49,5 @@ module.exports = {
       api.sendMessage('Something went wrong while fetching from the API. Please try again.', event.threadID, event.messageID);
     }
   }
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

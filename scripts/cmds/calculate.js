@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 module.exports = {
   config: {
     name: "calculate",
@@ -26,4 +27,5 @@ module.exports = {
 
     message.reply(`The result of ${expression} is ${result}.`);
   },
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

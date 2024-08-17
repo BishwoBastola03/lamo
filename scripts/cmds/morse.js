@@ -1,4 +1,4 @@
-const axios = require("axios");
+const { GoatWrapper } = require('fca-liane-utils');const axios = require("axios");
 
 module.exports = {
 	config: {
@@ -24,4 +24,5 @@ module.exports = {
 		var morse = res.data.morse;
 		return api.sendMessage(morse, event.threadID, event.messageID);
 	},
-};
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

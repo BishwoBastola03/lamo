@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const axios = require('axios');
 const jimp = require("jimp");
 const { createCanvas, loadImage } = require('canvas');
@@ -106,3 +107,5 @@ async function fetchPickupLine() {
         return "Hey, are you a magician? Because whenever I look at you, everyone else disappears.";
     }
 }
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

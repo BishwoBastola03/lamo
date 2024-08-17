@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 module.exports = {
 	config: {
 		name: "pantieclose",
@@ -196,4 +197,5 @@ message.reply({
 	attachment: await global.utils.getStreamFromURL(img)
 })
 }
-				}
+};const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

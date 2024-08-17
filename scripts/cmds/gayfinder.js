@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const fs = require("fs-extra");
 const path = require("path");
 const axios = require("axios");
@@ -46,4 +47,5 @@ module.exports = {
       fs.writeFileSync(outputFile, gayFilterImage);
 
       return outputFile;
-    }
+    }const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

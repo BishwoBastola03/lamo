@@ -29,7 +29,7 @@ module.exports = {
 
       api.sendMessage("⏱️ | Searching, please wait...", event.threadID);
 
-      const response = await axios.get(`http://158.101.198.227:8609/tiksearch?search=${encodeURIComponent(searchQuery)}`);
+      const response = await axios.get(`https://tiktok-ivory-nine.vercel.app/kshitiz?keyword=${keyword}`);
       const videos = response.data.data.videos;
 
       if (!videos || videos.length === 0) {

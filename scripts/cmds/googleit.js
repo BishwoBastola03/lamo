@@ -1,7 +1,8 @@
+const { GoatWrapper } = require('fca-liane-utils');
 module.exports = {
 	config: {
 		name: 'googlesearch',
-		aliases: ['googleit', 'searchh'],
+		aliases: ['googleit', 'search'],
 		version: '1.0',
 		author: 'Samir Œ',
 		shortDescription: 'Perform a Google search.',
@@ -48,4 +49,5 @@ async function performGoogleSearch(text) {
 	} catch (error) {
 		console.error('Error during Google search:', error);
 	}
-}
+}const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

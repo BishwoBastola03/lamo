@@ -1,0 +1,10 @@
+[
+  {
+    "role": "user",
+    "content": "remake the sentence with a perfect grammer and understandable english only the group admin has acess to use the bot command and currently you are ban"
+  },
+  {
+    "role": "assistant",
+    "content": "Here is the remade sentence with perfect grammar and understandable English:\n\n\"Currently, as a banned user, you do not have access to use the bot command, and only the group admin has the ability to use it.\""
+  }
+]

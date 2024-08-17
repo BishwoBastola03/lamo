@@ -1,3 +1,4 @@
+const { GoatWrapper } = require('fca-liane-utils');
 const { createCanvas, loadImage } = require('canvas');
 const fs = require('fs');
 const path = require('path');
@@ -182,3 +183,5 @@ function drawRoundedRect(ctx, x, y, width, height, radius, color) {
     ctx.fill();
     ctx.restore();
 }
+const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });

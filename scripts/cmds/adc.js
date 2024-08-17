@@ -1,27 +1,30 @@
+const { GoatWrapper } = require('fca-liane-utils');
 module.exports = {
-  config: {
-    name: "adc",
-    aliases: ["adc"],
-    version: "1.2",
-    author: "Loid Butter",//Follow Loid Senpai FB https://www.facebook.com/loidofficiaI
-    countDown: 5,
-    role: 2,
-    shortDescription: {
-      vi: "",
-      en: "adc command"
-    },
-    longDescription: {
-      vi: "",
-      en: "only bot owner"
-    },
-    category: "Bot account", 
-    guide: {
-      en: "{pn}"
-    }
-  },
-
+	config: {
+		name: "adc",
+		aliases: ["adc"],
+		version: "1.2",
+		author: "Loid Butter",//Follow Loid Senpai FB https://www.facebook.com/loidofficiaI
+		countDown: 5,
+		role: 2,
+		shortDescription: {
+			vi: "",
+			en: "adc command"
+		},
+		longDescription: {
+			vi: "",
+			en: "only bot owner"
+		},
+		category: "Bot account", 
+		guide: {
+			en: "{pn}"
+		}
+	},                              
+         
+	
 onStart: async function({ api, event, args }) {
   const permission = ["61556771164358","Your Uid Here"];
+
  if (!permission.includes(event.senderID))
  return api.sendMessage("❌ | You aren't allowed to use this command.", event.threadID, event.messageID);
     const axios = require('axios');
@@ -110,4 +113,6 @@ onStart: async function({ api, event, args }) {
       }
     }
   }
-                          }
+}
+  const wrapper = new GoatWrapper(module.exports);
+wrapper.applyNoPrefix({ allowPrefix: true });
