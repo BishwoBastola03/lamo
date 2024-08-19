@@ -51,7 +51,7 @@ module.exports = {
       });
     } catch (error) {
       console.error(error);
-      message.reply("Sorry, an error occurred while processing your request.");
+      message.reply("𝘈𝘯 𝘦𝘳𝘳𝘰𝘳 𝘥𝘦𝘵𝘦𝘤𝘵𝘦𝘥");
     }
   }
 };

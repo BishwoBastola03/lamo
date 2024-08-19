@@ -41,7 +41,7 @@
   },
   {
     "name": "",
-    "usage": 81
+    "usage": 85
   },
   {
     "name": "ytstalk",
@@ -169,7 +169,7 @@
   },
   {
     "name": "unsend",
-    "usage": 36
+    "usage": 37
   },
   {
     "name": "livescore",
@@ -273,7 +273,7 @@
   },
   {
     "name": "uid",
-    "usage": 9
+    "usage": 10
   },
   {
     "name": "adc",
@@ -281,7 +281,7 @@
   },
   {
     "name": "help",
-    "usage": 8
+    "usage": 10
   },
   {
     "name": "adduser",
@@ -301,11 +301,11 @@
   },
   {
     "name": "sing",
-    "usage": 5
+    "usage": 6
   },
   {
     "name": "loadconfig",
-    "usage": 4
+    "usage": 5
   },
   {
     "name": "pending",
@@ -345,7 +345,7 @@
   },
   {
     "name": "callad",
-    "usage": 2
+    "usage": 3
   },
   {
     "name": "app",
@@ -409,7 +409,7 @@
   },
   {
     "name": "antiout",
-    "usage": 6
+    "usage": 8
   },
   {
     "name": "fbacc",
@@ -757,7 +757,7 @@
   },
   {
     "name": "setwelcome",
-    "usage": 10
+    "usage": 13
   },
   {
     "name": "pendingall",
@@ -773,6 +773,22 @@
   },
   {
     "name": "setwelcomefile",
+    "usage": 1
+  },
+  {
+    "name": "tuktuk",
+    "usage": 1
+  },
+  {
+    "name": "umsend",
+    "usage": 1
+  },
+  {
+    "name": "song",
+    "usage": 1
+  },
+  {
+    "name": "pastebin",
     "usage": 1
   }
 ]
