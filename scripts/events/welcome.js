@@ -109,10 +109,7 @@ module.exports = {
                   ? getLang("session2")
                   : hours <= 18
                     ? getLang("session3")
-                    : hours <= 20
-                    ?getLang("session4")
-               : hours <= 20
-              ?getLang("session5")
+                    : getLang("session4")
             );
 
           form.body = welcomeMessage;
