@@ -1,4 +1,4 @@
-git push origin main# index.js
+# index.js
 Goat.newVersionDetected=You are using version %1, the latest version is %2. Please update to use the bot better by typing into the console/cmd command: %3
 Goat.autoRestart1=Bot will auto restart in %1
 Goat.autoRestart2=Bot will auto restart by cron job: %1
