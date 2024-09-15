@@ -3,26 +3,25 @@ const fs = require('fs');
 const path = require('path');
 
 const chatHistoryDir = 'groqllama70b';
-const apiKey = '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';
+const apiKey = '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';
 
 const groq = new Groq({ apiKey });
 
-const systemPrompt = "Examine the prompt and respond precisely as directed, omitting superfluous information. Provide brief responses, typically 1-2 sentences, except when detailed answers like essays, poems, or stories are requested.";
+const systemPrompt = "Examine the prompt and respond precisely as directed, omitting superfluous information. Provide brief responses, typically 1-2 sentences, except when detailed answers like essays, poems, or stories are requested."; //change if needed
 
 module.exports = {
     config: {
         name: 'l',
-        aliases: ['llm'],
-        version: '1.1.8',
+        version: '1.1.11',
         author: 'Shikaki',
         countDown: 0,
         role: 0,
         category: 'Ai',
         description: {
-            en: 'llama3 70b - groq.',
+            en: 'Use it if you want very fast answers. (Uses Llama3 70b hosted on groq)',
         },
         guide: {
-            en: '{pn} [question]',
+            en: '{pn} [question]\n\nReply clear to clear the chat history.\nOr, use:\n\n{pn} clear',
         },
     },
     onStart: async function ({ api, message, event, args, commandName }) {
@@ -37,7 +36,6 @@ module.exports = {
         }
 
         var content = (event.type == "message_reply") ? event.messageReply.body : args.join(" ");
-        var targetMessageID = (event.type == "message_reply") ? event.messageReply.messageID : event.messageID;
 
         if (event.type == "message_reply") {
             content = content + " " + prompt;
@@ -73,13 +71,12 @@ module.exports = {
 
                 let finalMessage = `${assistantResponse}\n\nCompletion time: ${completionTime} seconds\nTotal words: ${totalWords}`;
 
-                api.sendMessage(finalMessage, event.threadID, (err, info) => {
+                message.reply(finalMessage, (err, info) => {
                     if (!err) {
                         global.GoatBot.onReply.set(info.messageID, {
                             commandName,
                             messageID: info.messageID,
                             author: event.senderID,
-                            replyToMessageID: targetMessageID
                         });
                     } else {
                         console.error("Error sending message:", err);
@@ -88,13 +85,13 @@ module.exports = {
 
                 chatHistory.push({ role: "user", content: prompt });
                 chatHistory.push({ role: "assistant", content: assistantResponse });
-                appendToChatHistory(targetMessageID, chatHistory);
+                appendToChatHistory(event.senderID, chatHistory);
 
                 api.setMessageReaction("✅", event.messageID, () => { }, true);
             } catch (error) {
                 console.error("Error in chat completion:", error);
                 api.setMessageReaction("❌", event.messageID, () => { }, true);
-                return message.reply(`An error occurred: ${error}`, event.threadID, event.messageID);
+                return message.reply(`An error occured.`);
             }
         }
         else {
@@ -135,13 +132,12 @@ module.exports = {
 
                 let finalMessage = `${assistantResponse}\n\nCompletion time: ${completionTime} seconds\nTotal words: ${totalWords}`;
 
-                api.sendMessage(finalMessage, event.threadID, (err, info) => {
+                message.reply(finalMessage, (err, info) => {
                     if (!err) {
                         global.GoatBot.onReply.set(info.messageID, {
                             commandName,
                             messageID: info.messageID,
                             author: event.senderID,
-                            replyToMessageID: event.messageID
                         });
                     } else {
                         console.error("Error sending message:", err);
@@ -156,7 +152,7 @@ module.exports = {
             } catch (error) {
                 console.error("Error in chat completion:", error);
                 api.setMessageReaction("❌", event.messageID, () => { }, true);
-                return message.reply(`An error occurred: ${error}`, event.threadID, event.messageID);
+                return message.reply(`An error occured.`);
             }
         }
     },
@@ -222,7 +218,7 @@ module.exports = {
             api.setMessageReaction("✅", event.messageID, () => { }, true);
         } catch (error) {
             console.error("Error in chat completion:", error);
-            message.reply(error.message);
+            message.reply(`An error occured.`);
             api.setMessageReaction("❌", event.messageID, () => { }, true);
         }
     }
